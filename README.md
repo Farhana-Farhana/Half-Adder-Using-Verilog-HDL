@@ -41,16 +41,9 @@ C = A · B
 
 ---
 
-# Verilog Code
-
-- `half_adder.v`
-- `half_adder_tb.v`
-
----
-
 # Simulation Waveform
 
-![Half Adder Waveform](sim.png)
+![Half Adder Waveform](waveform.png)
 
 ---
 
@@ -58,9 +51,3 @@ C = A · B
 
 - Verilog HDL
 - Xilinx Vivado
-
----
-
-# Author
-
-Farhana N S
