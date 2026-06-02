@@ -55,6 +55,7 @@ assign Sum = A ^ B;
 assign Carry = A & B;
 
 endmodule
+```
 
 # Testbench
 
