@@ -41,6 +41,60 @@ C = A · B
 
 ---
 
+# Verilog Code
+
+```verilog
+module half_adder(
+    input A,
+    input B,
+    output Sum,
+    output Carry
+);
+
+assign Sum = A ^ B;
+assign Carry = A & B;
+
+endmodule
+
+# Testbench
+
+```verilog
+`timescale 1ns / 1ps
+
+module half_adder_tb;
+
+reg A;
+reg B;
+wire Sum;
+wire Carry;
+
+// Instantiate the Half Adder
+half_adder uut (
+    .A(A),
+    .B(B),
+    .Sum(Sum),
+    .Carry(Carry)
+);
+
+initial begin
+    A = 0; B = 0;
+    #10;
+
+    A = 0; B = 1;
+    #10;
+
+    A = 1; B = 0;
+    #10;
+
+    A = 1; B = 1;
+    #10;
+
+    $finish;
+end
+
+endmodule
+```
+
 # Simulation Waveform
 
 ![Half Adder Waveform](waveform.png)
